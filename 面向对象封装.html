@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width: 20px;
+            height: 20px;
+        }
+    </style>
+
+</head>
+<body>
+<div></div>
+<div></div>
+<div></div>
+<p>p</p>
+<p>p</p>
+<p>p</p>
+<script>
+    window.onload = function(){
+//        var divs = document.getElementsByTagName("div") ;
+//        setStyle(divs);
+//        var ps = document.getElementsByTagName("p");
+//        setStyle(ps);
+//
+//        function setStyle(divs){
+//            for(var i=0;i<divs.length;i++ ){
+//                divs[i].style.border="1px solid red"
+//            }
+//        }
+//        function setStyle(ps){
+//            for(var i=0;i<ps.length;i++ ){
+//                ps[i].style.border="1px solid red"
+//            }
+//        }
+        var divs = tools.getEle.tag("div");
+        tools.setCss.setStyle(divs);
+        var ps = tools.getEle.tag("p");
+        tools.setCss.setStyle(ps);
+    };
+        var tools = {
+            getEle: {
+                tag: function (tagName) {
+                    return document.getElementsByTagName(tagName);
+                },
+                id: function (idName) {
+                    return document.getElementById(idName);
+                }
+            },
+            setCss: {
+                setStyle: function (arr) {
+                    for(var i = 0; i < arr.length; i++) {
+                        arr[i].style.border = "1px solid #abc";
+                    }
+                },
+                css: function() {},
+                addClass: function() {},
+                removeClass: function() {}
+                // ...
+            }
+            // 属性操作模块
+            // 动画模块
+            // 事件模块
+            // ...
+        };
+
+
+
+
+</script>
+</body>
+</html>

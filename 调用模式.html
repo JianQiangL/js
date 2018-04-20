@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+//    function fn() {
+//        console.log(this);//window
+//    }
+//    var  fn2= function(){
+//        console.log(this);//window
+//    }
+//    fn();
+//    fn2();
+
+
+    //方法模式
+//    var Obj = {
+//        fn:function () {
+//            console.log(this);//实例对象
+//
+//        }
+//    };
+//    Obj.fn();
+
+
+
+function Person(){
+
+    this.name ="张三";
+    this.age = 18;
+    console.log(this);
+  this.sayHello = function () {
+      console.log(this);//实例对象
+  };
+  return {};
+}
+
+var p = new Person();
+//p.sayHello();
+console.log(p);
+</script>
+
+</body>
+</html>

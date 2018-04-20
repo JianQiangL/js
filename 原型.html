@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function Person(pname){
+        this.name=pname;
+        this.age=15;
+        this.exercise=function(){
+            console.log("就不强身健体");
+        }
+    }
+    var p = new Person("张三");
+    console.log(Person.prototype);
+    Person.prototype.exercise=function(){
+        console.log("强身健体");
+    };
+    console.log(p);
+</script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //稀疏行数组
+//    var arr =  new Array();
+//    arr[0]= 1;
+//    arr[3]= 1;
+//    arr[7]= 1;
+//    console.log(arr);
+    //关联行数组，数组下标数有意义的字符串，js中需要自己维护length属性
+//    $arr = new Array("0" =>123,"aa"=>456);
+//var arr = new Array();
+//arr["name"]= "zhangsan";
+//arr["age"]= 18;
+//arr["sex"]= "man;";
+//arr["length"]= 3;
+//    console.log(arr);
+//    var arr = [1,2,3];
+//arr.length = 0;
+//console.log(arr);
+
+
+//    伪数组/类数组：就是一个对象
+    //1.必须有length属性
+    //2.length为0，对象中可以有任意个元素
+    //3.length值，元素的最大角标+1
+    var arr = {length:0};
+    var arr1= {length:3,2:"aaa"};
+    var arr2= {length:2,0:"mmm",1:"nnn"};
+    var arr3= {length:4,0:"a",1:"b",2:"c",3:"d"};
+    console.log(arr);
+    console.log(arr1);
+    console.log(arr2);
+    console.log(arr3);
+</script>
+</body>
+</html>

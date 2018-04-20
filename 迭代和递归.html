@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+//    //迭代：用上一次的结果做下一次运算的参数
+//    //例如：1-100的和
+//    var sum = 0;
+//    for(var i=0;i<=100;i++){
+//            sum+=i;
+//        }
+//    console.log(sum);
+//    //递归
+//    //就是函数内调用自己
+//    //递归一定要有结束的条件
+//    function fn() {
+//        var date = new Date();
+//        var s = date.getSeconds();
+//        console.log(s);
+//        setTimeout (function () {
+//            fn()
+//;        },1000)
+//    }
+//    fn();
+    //求1-10的和
+    function sum(n) {
+        if(n===1){
+            return 1;
+        }else {
+            return sum(n-1)+n;
+        }
+    }
+    console.log(sum(10));
+</script>
+</body>
+</html>

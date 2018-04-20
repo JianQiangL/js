@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function Animal() {
+        this.name= "动物";
+
+    }
+    console.log(Animal.prototype );
+    Person.prototype = new Animal ();
+    Person.prototype.constructor =Person ;
+    function Person() {
+        this.name="人";
+
+    }
+    console.log(Person.prototype );
+     Student.prototype =new Person();
+    Student.prototype.constructor =Student;
+    function Student(){
+        this.name="学生";
+
+    }
+    console.log(Student.prototype);
+</script>
+</body>
+</html>

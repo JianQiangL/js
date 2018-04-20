@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var Animal = {
+        name:"Animal",
+        age:5,
+        color:"red",
+        say:function () {
+            console.log("动物说话");
+        }
+    };
+    function Dog() {
+        this.color = "yellow";
+    }
+    console.log(Dog.prototype);
+    function aa(obj) {
+        for(var k in obj){
+            this[k] = obj[k];
+        }
+    }
+//    Dog.prototype.extend = function (obj) {
+//        for(var k in obj){
+//            this[k] = obj[k];
+//        }
+//    };
+    Dog.prototype.extend = aa;
+
+    Dog.prototype.extend(Animal);
+
+    console.log(Dog.prototype);
+//    var b =0;
+//    fn();
+//    console.log(b);
+//    function fn() {
+//        b = 1;
+//    }
+//    fn();
+//    console.log(a);
+
+
+
+</script>
+</body>
+</html>

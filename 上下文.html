@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //上下文是针对this来说的，也就是说某一个东西调用另一个方法的时候，会返回一个对象，返回这个对象正常来说是不可改的，
+    //如果想改这个东西，就需要用到上下文的调用，也就是函数一个新的调用方式
+    //第一种 apply
+    //函数名，apply（对象，[参数]参数一：是你要返回的对象，参数二是你要调用这个函数所需要的参数
+    //第二种 call
+    //函数名，call（对象，参数1，参数2）；
+    //以上两种方法功能一模一样，区别在于传递的参数一个是数组，一个是一堆参数
+//    function fn() {
+//        console.log(this);
+//    }
+//fn();
+//  fn.apply(new Object);
+//  fn.apply("xxx");
+//  fn.apply(123);
+//  fn.apply(false);
+//  fn.apply(null);
+//  fn.apply(undefined );
+//  fn.apply([]);
+//  fn.apply(new Array());
+//  fn.apply({});
+
+
+
+  function fn1(num1,num2) {
+      console.log(this);
+  }
+    fn1.apply(null,[1 ,2]);
+    fn1.call(null,1 ,2);
+</script>
+</body>
+</html>

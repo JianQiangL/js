@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function test(para){
+        if(para == undefined){
+            throw new Error("请传递参数");
+            //这里也可以使用自定义的对象
+            throw {"id":1, msg:"参数未传递"};
+        }
+    }
+
+    try{
+        test();
+    }catch(e){
+        console.log(e);
+    }
+</script>
+</body>
+</html>

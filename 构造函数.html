@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function Student(stuName){
+        this.name=stuName;
+        this.study=studyMethod;
+    }
+    function studyMethod(){
+        console.log("我叫:"+this.name+"good good study day day up");
+    }
+    Student.prototype.studyMethod=function (){
+        console.log("我叫:"+this.name+"good good study day day up");
+    }
+    var s1 = new Student("Shan");
+    s1.studyMethod();
+    var s2 = new Student("aaa");
+    s2.studyMethod();
+
+</script>
+</body>
+</html>

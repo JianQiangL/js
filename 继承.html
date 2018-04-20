@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var obj = {};
+    //    obj.sayHello();
+    var obj2 = {
+        name: "张三",
+        age: 15,
+        sayHello: function () {
+            console.log("hello");
+        }
+
+    };
+    //    obj.sayHello();
+    for (var k in obj2) {
+        obj[k] = obj2[k];
+    }
+    obj.sayHello();
+
+</script>
+</body>
+</html>

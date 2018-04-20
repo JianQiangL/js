@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+//    原型使用方法：
+//    1，利用对象的动态特性个原型添加成员
+
+//    2，直接替换原型对象
+//    如果使用第二种原型，出现的问题：
+//    在替换原型之前创建的对象的原型 和 替换原型对象之后的创建的对象的原型 不是同一个
+{
+
+}
+//{
+//    sayHi:function () {
+//        console.log("hi");
+//    }
+//}
+//{
+//    msg:"666"
+//}
+    function Person(name,age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    Person.prototype.sayHi = function () {
+        console.log("hi");
+    };
+//    console.log(Person.prototype);
+    var  p = new Person("zhangsan",18);
+    p.sayHi();
+    Person.prototype = {
+        msg:"666"
+    };
+    var p1 = new Person("lisi",17);
+    p1.sayHi();
+</script>
+</body>
+</html>

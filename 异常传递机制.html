@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function f1 () {
+        f2(); // f1 称为调用者, 或主调函数, f2 称为被调用者, 或被调函数
+    }
+
+    function f2 () {
+        f3();
+    }
+
+    function f3() {
+        throw new Error( 'error' );
+    }
+//    try{
+//        f1();
+//    }catch(e){
+//
+//    }
+    f1();
+    console.log(123)
+</script>
+</body>
+</html>

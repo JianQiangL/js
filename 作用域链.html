@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var num0_1 = 123;//全局变量
+    function fn0_1() {//全局的函数
+        var num1_1 = 456;//作用于范围：fn0_1
+        function fn1_1() {//作用于范围：fn0_1
+            var num2_1 =789;//作用于范围：fn1_1
+            function fn2_1() {//作用于范围：fn1_1
+                var num3_1 = 963;
+            }
+            function fn2_2() {
+                var num3_2 =852;
+            }
+            
+        }
+        function fn1_2() {
+            var num2_2 = 741;
+        }
+    }
+</script>
+</body>
+</html>
